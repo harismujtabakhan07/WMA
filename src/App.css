@@ -1,38 +1,147 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f4f9;
+}
+
+.app {
+  padding: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app > h1 {
+  color: #243b64;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dashboard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 25px;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contacts,
+.signup {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contacts {
+  width: 35%;
+}
+
+.signup {
+  width: 65%;
+  text-align: left;
+}
+
+.contacts h2,
+.signup h2,
+.counter h2 {
+  color: #243b64;
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #e8eef8;
+  color: #243b64;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.contact-button:hover {
+  background-color: #cbdaf3;
+}
+
+.contact-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f4f9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.contact-details p {
+  margin-top: 8px;
+}
+
+.signup label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+.signup input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.signup button,
+.counter button {
+  padding: 11px 18px;
+  margin-top: 15px;
+  margin-right: 8px;
+  border: none;
+  background-color: #2864c5;
   color: white;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.signup button:hover,
+.counter button:hover {
+  background-color: #17468f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.message-button {
+  background-color: #168653 !important;
+}
+
+.message {
+  margin-top: 15px;
+  color: #168653;
+  font-weight: bold;
+}
+
+.counter {
+  margin: 30px auto;
+  max-width: 500px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counter h1 {
+  color: #2864c5;
+  font-size: 45px;
+  margin: 15px;
+}
+
+@media (max-width: 650px) {
+  .dashboard {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contacts,
+  .signup {
+    width: 100%;
   }
 }
