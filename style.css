@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -16,3 +17,369 @@ button {
     border: none;
     cursor: pointer;
 }
+=======
+
+/* GENERAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263445;
+    line-height: 1.6;
+}
+
+a {
+    color: #1f5f99;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #12345a;
+    text-decoration: underline;
+}
+
+/* =================================
+   TASK 1: RESUME DESIGN
+================================= */
+
+.resume-page {
+    background-color: #e8edf3;
+    padding: 30px 15px;
+}
+
+.resume-container {
+    max-width: 1050px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Resume Header */
+
+.resume-header {
+    text-align: center;
+    padding: 0 30px 20px;
+}
+
+.blue-bar {
+    height: 10px;
+    background-color: #12345a;
+    margin: 0 -30px;
+}
+
+.page-title {
+    color: #12345a;
+    font-size: 35px;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.resume-subtitle {
+    color: #617184;
+    margin-top: 5px;
+}
+
+/* Resume Layout */
+
+.resume-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 25px 35px;
+}
+
+/* Resume Sections */
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section h2,
+.resume-sidebar h2 {
+    color: #12345a;
+    border-bottom: 2px solid #cbd9e8;
+    padding-bottom: 7px;
+}
+
+.resume-section p {
+    margin: 8px 0;
+}
+
+.resume-section ul {
+    padding-left: 25px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+}
+
+/* Contact Sidebar */
+
+.resume-sidebar {
+    background-color: #eef4fa;
+    padding: 20px;
+    border-left: 4px solid #12345a;
+}
+
+.resume-sidebar p {
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+.resume-footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    color: #617184;
+}
+
+/* =================================
+   TASK 2: PORTFOLIO WEBSITE
+================================= */
+
+.portfolio-page {
+    background-color: white;
+}
+
+/* Navigation */
+
+.site-header {
+    background: linear-gradient(
+        135deg,
+        #102d4f,
+        #1f5f99
+    );
+    color: white;
+}
+
+.navbar {
+    max-width: 1120px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+}
+
+/* Hero Section */
+
+.hero {
+    max-width: 1120px;
+    margin: auto;
+    padding: 60px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #b8dcff;
+}
+
+.hero-image {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.primary-link {
+    display: inline-block;
+    background-color: white;
+    color: #12345a;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Main Sections */
+
+.content-section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.content-section h2 {
+    color: #12345a;
+    font-size: 28px;
+}
+
+.content-section h3 {
+    color: #12345a;
+}
+
+.tinted {
+    max-width: 100%;
+    background-color: #eef4fa;
+}
+
+.tinted > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Education Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #12345a;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #cbd6e2;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Projects */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #d8e1eb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+/* Skills */
+
+.two-column-list {
+    columns: 2;
+}
+
+/* Images */
+
+.learning-image,
+.map-image {
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+figcaption {
+    color: #617184;
+    font-size: 14px;
+}
+
+/* Contact Form */
+
+.contact-form {
+    max-width: 620px;
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c6d5;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 12px 22px;
+    background-color: #12345a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-form button:hover {
+    background-color: #1f5f99;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #102d4f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 720px) {
+
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-sidebar {
+        border-left: none;
+        border-top: 4px solid #12345a;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .two-column-list {
+        columns: 1;
+    }
+
+}
+>>>>>>> 168c53c1cb5124d1928935aae04f25977f442945

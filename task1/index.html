@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 - DOM and BOM</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background-color: lightblue;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 7px;
+            cursor: pointer;
+            border: none;
+            background-color: navy;
+            color: white;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading">Welcome to JavaScript</h1>
+    <p id="paragraph">This is a DOM and BOM assignment.</p>
+
+    <h2>DOM Manipulation</h2>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="showDateTime()">Show Date & Time</button>
+
+    <h2>BOM Features</h2>
+
+    <button onclick="openWindow()">Open New Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <button onclick="showBrowserInfo()">Browser Information</button>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goForward()">Go Forward</button>
+
+    <p id="result"></p>
+
+    <script>
+        let newWindow;
+
+        // Change heading and paragraph
+        function changeText() {
+            document.getElementById("heading").textContent =
+                "JavaScript DOM Manipulation";
+
+            document.getElementById("paragraph").textContent =
+                "The text has been changed successfully!";
+        }
+
+        // Change background color
+        function changeBackground() {
+            let color = "#" + Math.floor(
+                Math.random() * 16777215
+            ).toString(16).padStart(6, "0");
+
+            document.body.style.backgroundColor = color;
+        }
+
+        // Show current date and time
+        function showDateTime() {
+            document.getElementById("result").textContent =
+                "Current Date & Time: " + new Date().toLocaleString();
+        }
+
+        // Open new window
+        function openWindow() {
+            newWindow = window.open("https://www.google.com", "_blank");
+
+            if (!newWindow) {
+                alert("Please allow pop-ups in your browser.");
+            }
+        }
+
+        // Close opened window
+        function closeWindow() {
+            if (newWindow && !newWindow.closed) {
+                newWindow.close();
+            } else {
+                alert("No opened window to close.");
+            }
+        }
+
+        // Show browser information
+        function showBrowserInfo() {
+            document.getElementById("result").textContent =
+                "Screen Width: " + screen.width +
+                " | Screen Height: " + screen.height +
+                " | Browser: " + navigator.userAgent;
+        }
+
+        // Navigate backward
+        function goBack() {
+            history.back();
+        }
+
+        // Navigate forward
+        function goForward() {
+            history.forward();
+        }
+    </script>
+
+</body>
+</html>
