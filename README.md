@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Rendering Methods
 
-## Getting Started
+## Objective
+To understand and compare three rendering methods in Next.js:
+SSR, CSR, and SSG.
 
-First, run the development server:
+## Technologies Used
+- Next.js
+- React
+- JavaScript
+- CSS
+- JSONPlaceholder API
 
-```bash
+## Rendering Methods
+
+### 1. Server-Side Rendering (SSR)
+- Data is fetched on the server for every request.
+- Provides fresh and updated data.
+- Suitable for dynamic websites and frequently changing content.
+
+### 2. Client-Side Rendering (CSR)
+- Data is fetched in the browser.
+- Uses React useEffect() and useState().
+- Suitable for dashboards and interactive applications.
+
+### 3. Static Site Generation (SSG)
+- Pages are generated during the build process.
+- Uses cached data.
+- Suitable for blogs, portfolios and documentation.
+
+## Performance Comparison
+
+| Method | Rendering | Performance |
+|---|---|---|
+| SSR | Server per request | Depends on server response |
+| CSR | Browser | Data appears after API request |
+| SSG | Build time | Usually fastest page delivery |
+
+## Best Use Cases
+
+- SSR: News websites and dynamic pages.
+- CSR: Admin dashboards and interactive applications.
+- SSG: Blogs, portfolios and documentation.
+
+## Performance Testing
+
+Performance is tested using Chrome DevTools Network Tab.
+
+Actual loading times will be recorded after testing.
+
+## How to Run
+
+Install dependencies:
+
+npm install
+
+Start development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000
