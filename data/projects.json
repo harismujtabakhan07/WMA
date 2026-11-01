@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Smart Irrigation Agent",
+    "description": "A Python-based intelligent irrigation agent that checks soil moisture and controls water pump decisions.",
+    "github": "https://github.com/yourusername/smart-irrigation"
+  },
+  {
+    "id": 2,
+    "title": "React Hooks Assessment",
+    "description": "A React application demonstrating useState, useEffect, useContext and localStorage.",
+    "github": "https://github.com/yourusername/react-hooks-assessment"
+  },
+  {
+    "id": 3,
+    "title": "Next.js Rendering Methods",
+    "description": "A project demonstrating SSR, CSR and SSG rendering methods in Next.js.",
+    "github": "https://github.com/yourusername/rendering-methods"
+  }
+]
