@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Advanced DOM and BOM</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background-color: lightyellow;
+            transition: background-color 0.3s;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 7px;
+            cursor: pointer;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 17px;
+            overflow-wrap: anywhere;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">Welcome to Advanced JavaScript</h1>
+    <p id="paragraph">Click buttons to explore DOM and BOM features.</p>
+
+    <h2>DOM Manipulation</h2>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="showDateTime()">Show Date & Time</button>
+
+    <h2>BOM Features</h2>
+
+    <button onclick="openWindow()">Open New Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <button onclick="showBrowserInfo()">Browser Information</button>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goForward()">Go Forward</button>
+
+    <p id="result">Your results will appear here.</p>
+
+    <script>
+        let newWindow;
+
+        // Response counters
+        let textCount = 0;
+        let colorCount = 0;
+        let dateCount = 0;
+        let openCount = 0;
+        let closeCount = 0;
+        let infoCount = 0;
+        let backCount = 0;
+        let forwardCount = 0;
+
+        // Different heading and paragraph responses
+        const textResponses = [
+            ["Hello Student!", "Welcome to JavaScript DOM."],
+            ["Learning DOM!", "You successfully changed the text."],
+            ["JavaScript Practice", "DOM makes webpages interactive."],
+            ["Keep Learning!", "Your JavaScript skills are improving."],
+            ["Task Completed!", "You tested five different text responses."]
+        ];
+
+        function changeText() {
+            let index = textCount % 5;
+
+            document.getElementById("heading").textContent =
+                textResponses[index][0];
+
+            document.getElementById("paragraph").textContent =
+                textResponses[index][1];
+
+            textCount++;
+        }
+
+        // Five different background colors
+        const colors = [
+            "lightblue",
+            "lightgreen",
+            "lightpink",
+            "lightyellow",
+            "lavender"
+        ];
+
+        function changeBackground() {
+            let index = colorCount % 5;
+
+            document.body.style.backgroundColor = colors[index];
+
+            document.getElementById("result").textContent =
+                "Background changed to " + colors[index];
+
+            colorCount++;
+        }
+
+        // Five different date/time formats
+        function showDateTime() {
+            let now = new Date();
+
+            const dateFormats = [
+                now.toLocaleString(),
+                now.toDateString(),
+                now.toLocaleTimeString(),
+                now.toLocaleDateString(),
+                now.toUTCString()
+            ];
+
+            let index = dateCount % 5;
+
+            document.getElementById("result").textContent =
+                "Date/Time Response " + (index + 1) +
+                ": " + dateFormats[index];
+
+            dateCount++;
+        }
+
+        // Open five different website windows
+        const websites = [
+            "https://www.google.com",
+            "https://www.wikipedia.org",
+            "https://www.youtube.com",
+            "https://www.github.com",
+            "https://www.w3schools.com"
+        ];
+
+        function openWindow() {
+            let index = openCount % 5;
+
+            newWindow = window.open(websites[index], "_blank");
+
+            if (newWindow) {
+                document.getElementById("result").textContent =
+                    "Opened: " + websites[index];
+                openCount++;
+            } else {
+                document.getElementById("result").textContent =
+                    "Pop-up blocked. Allow pop-ups and try again.";
+            }
+        }
+
+        // Close the last opened window
+        function closeWindow() {
+            if (newWindow && !newWindow.closed) {
+                newWindow.close();
+
+                const messages = [
+                    "Window closed successfully!",
+                    "Your opened tab has been closed.",
+                    "Browser window closed.",
+                    "The website window is now closed.",
+                    "Close operation completed!"
+                ];
+
+                let index = closeCount % 5;
+
+                document.getElementById("result").textContent =
+                    messages[index];
+
+                closeCount++;
+            } else {
+                document.getElementById("result").textContent =
+                    "No open window available. Open a window first.";
+            }
+        }
+
+        // Five different browser information reports
+        function showBrowserInfo() {
+            const reports = [
+                "Browser: " + navigator.userAgent,
+                "Screen Width: " + screen.width,
+                "Screen Height: " + screen.height,
+                "Available Screen: " + screen.availWidth +
+                    " x " + screen.availHeight,
+                "Language: " + navigator.language +
+                    " | Platform: " + navigator.platform
+            ];
+
+            let index = infoCount % 5;
+
+            document.getElementById("result").textContent =
+                reports[index];
+
+            infoCount++;
+        }
+
+        // Navigate backward
+        function goBack() {
+            const messages = [
+                "Going back to previous page.",
+                "Back navigation requested.",
+                "Returning to previous history entry.",
+                "Browser back action executed.",
+                "Back navigation request number five."
+            ];
+
+            let index = backCount % 5;
+
+            document.getElementById("result").textContent =
+                messages[index];
+
+            backCount++;
+
+            setTimeout(function () {
+                history.back();
+            }, 300);
+        }
+
+        // Navigate forward
+        function goForward() {
+            const messages = [
+                "Going forward to next page.",
+                "Forward navigation requested.",
+                "Moving to next history entry.",
+                "Browser forward action executed.",
+                "Forward navigation request number five."
+            ];
+
+            let index = forwardCount % 5;
+
+            document.getElementById("result").textContent =
+                messages[index];
+
+            forwardCount++;
+
+            setTimeout(function () {
+                history.forward();
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
